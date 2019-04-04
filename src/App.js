@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import QuoteBox from './quoteBox'
 import './App.css';
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>React App</h1>
+        <QuoteBox/>
       </div>
     );
   }
