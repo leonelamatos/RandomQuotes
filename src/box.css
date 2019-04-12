@@ -1,94 +1,141 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Courgette|Asap|Abril+Fatface|Crete+Round|Josefin+Slab');
 
 :root{
   --color: #bbb;
 }
 
 body{
-  background-color: var(--color);
-  color: var(--color);
+  /* background-color: var(--color);
+  color: var(--color); 
+  color: #222; */
+  transition: background .7s;
+  background: #70e1f5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffd194, #70e1f5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  
+
+}
+
+.box-wrapper {
+ margin: 300px auto;
 }
 
 .box {
   width: 750px;
-  height: 50vh;
-  margin-top: 20%;
-  margin-bottom: 10%;
+  background-color: rgba(255,255,255,.1);
+  border-radius: 30px;
+  padding: 0 40px;
   box-sizing: border-box;
-  padding: 40px 50px;
-  /* background-color: aliceblue; */
-  /* opacity: 0.8; */
-  border-radius: 5px;
-  font-family: 'Quicksand', sans-serif;
-  display: flex;
-  flex-direction: column;
+  transition: all 1s;
+  border: 3px solid white;
+}
+
+.box h1 {
+  text-align: center;
+  font-family: 'Courgette', cursive;
+  font-weight: 700;
+  font-size: 70px;
+  letter-spacing: -2.5px;
+  margin-bottom: 20px;
+  position: relative;
+  top: -39;
+}
+
+.quote-symbol {
   color: #fff;
+  background-color: #222;
+  border-radius: 50%;
+
+  position: relative;
+  left: 75px;
+  top: -40px;
+  width: 100px;
+  height: 100px;
+  box-shadow: 5px 10px 18px rgba(30, 30, 30, 0.5)
 }
 
-.text {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  font-size: 30px;
-  justify-content: space-between;
-}
-
-.text::before {
-  left: 700px;
-  content: '\201c'
-}
-
-.text::before, .text::after {
-  position: absolute;
-  font-size: 350px;
-  color: #16b6df;
+.quote-symbol:before{
   font-family: Arial;
-  font-weight: bold;
-  line-height: 300px;
+  color: #fff;
+  font-size: 200px;
+  content: '\201c';
+  position: absolute;
+  top: -50px;
+  right: 15px;
 }
 
-.text::after {
-  right: 700px; 
-  content: '\201d'
+
+
+.quote-content{
+  position: relative;
+  top: -41px;
 }
 
-p{
-  margin-left: 15px;
+.text{
+  font-family: 'Josefin Slab', serif;
+  font-size: 30px;
+  font-weight: 500;
+  color:  #222;
+  line-height: 1.3;
+  text-align: left;
+  transition: opacity .8s;
 }
 
 .author {
-  font-size: 1.5rem;
-  font-weight: bold;
   text-align: right;
-  margin: 30px 0 0;
-  color: #16b6df;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 0;
+  transition: opacity .8s;
 }
 
-.btnQuote {
+/* .btnQuote {
   justify-content: flex-end;
-}
+} */
 
 .btn {
-  /* background-color: var(--color); */
-  /* position: absolute;
-  bottom: 200px; */
-  color: #fff;
-  width: 10em;
+ transition: opacity 1s;
 }
 
 .mediaIcons {
-  width: 60px;
-  display: flex;
-  justify-content: space-between;
-  /* align-self: flex-start */
+  text-align: right;
+
 }
 
 i{
   font-size: 30px;
-  color: rebeccapurple;
+  margin-right: 15px;
+  transition: opacity 1s;
 }
 
-footer {
-  display: flex;
-  justify-content: flex-end;
+.f-icon{
+  margin-right: 0;
 }
+
+footer{
+  text-align: start;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn{
+  width: 150px;
+  height: 40px;
+  transition: all 1s;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding: 0px;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn:hover{
+  opacity: .5;
+  transition: opacity 1s;
+}
+
