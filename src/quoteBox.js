@@ -8,7 +8,7 @@ let colors, quoteText, quoteAuthor, t_icon, f_icon, btn;
 colors = ['#293C56', '#71a0a5', '#6F5E76', '#88A096', '#71a0a5', '#444444', '#567568', '#C9B1BD', '#305f72', '#30BCED', '#73FBD3', '#6b8c42'];
 
 // color = colors[Math.floor(Math.random() * colors.length)];
-function sleeper(ms){
+function sleeper(ms){ 
   return function(x){
     return new Promise(resolve => setTimeout(() => resolve(x), ms))
   }
