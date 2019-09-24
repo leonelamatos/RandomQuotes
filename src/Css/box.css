@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Quicksand|Courgette|Asap|Abril+Fatface|Crete+Round|Josefin+Slab|Mansalva|Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Quicksand|Courgette|Asap|Crete+Round|Josefin+Slab|Mansalva|Pacifico&display=swap');
 
 :root{
   --color: #bbb;
@@ -12,8 +12,6 @@ body{
   background: #70e1f5;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #ffd194, #70e1f5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
-  
 
 }
 
@@ -23,12 +21,12 @@ body{
 
 .box {
   width: 900px;
-  /* background-color: rgba(0, 0, 0, 0.103); */
+  background-color: rgba(0, 0, 0, 0.103);
   border-radius: 30px;
   padding: 0 60px;
   box-sizing: border-box;
   transition: all 1s;
-  /* border: 3px solid white; */
+  border: 3px solid rgba(255, 255, 255, 0.726);
 }
 
 .box h1 {
@@ -44,14 +42,14 @@ body{
 
 .quote-symbol {
   color: #fff;
-  background-color: #222;
+  /* background-color: #222; */
   border-radius: 50%;
   position: relative;
   left: 50px;
   top: -70px;
   width: 150px;
   height: 150px;
-  box-shadow: 5px 10px 18px rgba(30, 30, 30, 0.5);
+  box-shadow: 10px 10px 25px rgba(30, 30, 30, 0.3);
   transition: background-color 1s;
 }
 
@@ -83,7 +81,7 @@ body{
   transition: opacity .8s;
   position: relative;
   /* top: -30px; */
-  text-align: justify;
+  text-align: left;
 }
 
 .text > p {
@@ -132,24 +130,24 @@ i{
   color: rgba(255,255,255,.9) !important;
 }
 
-
-
-footer{
+footer > div{
   text-align: start;
   display: flex;
   justify-content: space-between;
 }
 
-
+/* Abril+Fatface|Quicksand|Courgette|Asap|Crete+Round|Josefin+Slab|Mansalva|Pacifico&display=swap */
 
 .btn{
-  width: 150px;
-  height: 55px;
+  font-family: 'Quicksand';
+  font-weight: bold;
+  letter-spacing: 1px;
   transition: all 1s;
   color: white;
-  font-size: 20px;
+  font-size: 25px;
   text-align: center;
-  padding: 0px;
+  padding: 10px 20px;
+  position: relative;
 }
 
 .btn:focus {
@@ -162,3 +160,54 @@ footer{
   transition: opacity 1s;
 }
 
+#statement{
+  margin-bottom: 50px;
+}
+footer#statement > p{
+  font-family: 'Quicksand';
+  font-size: 1.1em;
+  margin-bottom: 0;
+  color: white;
+}
+
+/* CSS @media rules */
+
+@media screen and (max-width: 450px){
+
+  .box-wrapper {
+    margin: 80px auto;
+   }
+
+  .box {
+    width: 300px;
+    padding: 0 20px;
+  }
+
+  .quote-symbol {
+    left: 25px;
+    top: -50px;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .quote-symbol:before{
+    font-size: 250px;
+    top: -75px;
+    right: 10px;
+  }
+  
+  #statement {
+    margin-bottom: 0;
+  }
+
+  .text {
+    font-size: 1.5em;
+  }
+
+  .btn{
+    top: 125px;
+    width: 100%;
+  }
+
+
+}

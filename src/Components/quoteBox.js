@@ -70,7 +70,7 @@ class QuoteBox extends React.Component {
       randomColor(colors);
       textOpacity(1);
 
-      // console.log(res.data[0])
+      console.log(res.data[0])
       this.setState({ 
         quotes: content.rendered,
         author: title.rendered,
@@ -91,15 +91,17 @@ class QuoteBox extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="box-wrapper" id="quote-box">
+      <div style={{display: 'flex', flexDirection: 'column', positio: 'relative'}}>
+        <div id="quote-box" className="box-wrapper" >
         <div className='box'>
+          
           <div className="quote-symbol"></div>
           <div className="quote-content">
             {/* <h1>Quote</h1> */}
-            <div id="text">
-              <p  className="text">{parser(this.state.quotes)}</p>
-              <p id="author" className="author"> - {parser(this.state.author)}</p>
+            <div id="text" className="text">
+              {/* the <p></p> tag is coming with the data collected from axios */}
+              {parser(this.state.quotes)}
+              <p id="author" className="author">{parser(this.state.author)} </p>
               <div className="mediaIcons">
                   <a  id="tweet-quote" rel="noopener noreferrer" target="_blank" href="https://twitter.com/intent/tweet"><i className="fab fa-twitter-square t-icon"></i></a>
                   <a href="http://facebook.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-square f-icon"></i></a>
@@ -107,12 +109,18 @@ class QuoteBox extends React.Component {
               </div>
 
               <footer>
-                <button id="new-quote" className="btn btnQuote" onClick={this.handleRequest}>New Quote</button>
-                
+                <div>
+                  <button id="new-quote" className="btn btnQuote" onClick={this.handleRequest}>get new quote</button>
+                </div>
               </footer>
             </div>
           </div>
           </div>
+
+          <footer id="statement">
+            <p>Random quote app, design and made by <a href="http://leonelmatos.com">Leonel Matos</a> as part as his learning path to Web Developmetn from FCC.</p>
+            <p><em>&#x2014; Quotes data from <a href="https://quotesondesign.com/">Quotes Design</a> &#x2014;</em></p>
+         </footer>
       </div>
     )
   }
