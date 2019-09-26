@@ -118,7 +118,7 @@ class QuoteBox extends React.Component {
           </div>
 
           <footer id="statement">
-            <p>Random quote app, design and made by <a href="http://leonelmatos.com">Leonel Matos</a> as part as his learning path to Web Developmetn from FCC.</p>
+            <p>Random quote app, design and made by <a href="https://leonelmatos.com">Leonel Matos</a> as part as his learning path to Web Developmetn from FCC.</p>
             <p><em>&#x2014; Quotes data from <a href="https://quotesondesign.com/">Quotes Design</a> &#x2014;</em></p>
          </footer>
       </div>
