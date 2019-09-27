@@ -91,7 +91,8 @@ class QuoteBox extends React.Component {
 
   render() {
     return (
-      <div style={{display: 'flex', flexDirection: 'column', positio: 'relative'}}>
+      <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center', height: '100%'}}>
+       <div  > 
         <div id="quote-box" className="box-wrapper" >
         <div className='box'>
           
@@ -101,7 +102,7 @@ class QuoteBox extends React.Component {
             <div id="text" className="text">
               {/* the <p></p> tag is coming with the data collected from axios */}
               {parser(this.state.quotes)}
-              <p id="author" className="author">{parser(this.state.author)} </p>
+              <p id="author" className="author">&#x2014;{parser(this.state.author)} </p>
               <div className="mediaIcons">
                   <a  id="tweet-quote" rel="noopener noreferrer" target="_blank" href="https://twitter.com/intent/tweet"><i className="fab fa-twitter-square t-icon"></i></a>
                   <a href="http://facebook.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-square f-icon"></i></a>
@@ -116,8 +117,8 @@ class QuoteBox extends React.Component {
             </div>
           </div>
           </div>
-
-          <footer id="statement">
+        </div>
+        <footer id="statement">
             <p>Random quote app, design and made by <a href="https://leonelmatos.com">Leonel Matos</a> as part as his learning path to Web Developmetn from FCC.</p>
             <p><em>&#x2014; Quotes data from <a href="https://quotesondesign.com/">Quotes Design</a> &#x2014;</em></p>
          </footer>
